@@ -1,9 +1,0 @@
-message = param.get("text");
-
-if(message.toLowerCase().contains("priority")) {
-    reply = "Priority received. Tagging this as *Emergency*.";
-} else {
-    reply = "Priority Bot active. Send a message with the word 'priority' to test.";
-}
-
-return {"text": reply};
