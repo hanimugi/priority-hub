@@ -3,10 +3,19 @@
   "description": "Priority-based communication extension for Zoho Cliq.",
   "version": "1.0",
   "type": "bot",
+  
   "bot": {
     "name": "Priority Bot",
-    "description": "Handles priority tagging and smart alerts."
+    "description": "Handles priority tagging and smart alerts.",
+    "functions": {
+      "message": "priority_handler"
+    }
   },
-  "widgets": [],
-  "functions": []
+
+  "functions": [
+    {
+      "name": "priority_handler",
+      "handler": "functions/priority_handler.ds"
+    }
+  ]
 }
