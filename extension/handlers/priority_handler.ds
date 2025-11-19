@@ -1,1 +1,17 @@
+response = Map();
+
+message = param.message;
+sender = param.sender_name;
+
+# Simple priority detection
+if(message.toLowerCase().contains("urgent") || message.toLowerCase().contains("emergency"))
+{
+    response.put("message", "🚨 High Priority Message detected from " + sender + ": " + message);
+}
+else
+{
+    response.put("message", "Message received from " + sender);
+}
+
+return response;
 
